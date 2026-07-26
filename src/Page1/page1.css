@@ -1,0 +1,28 @@
+.background-color {
+  background:linear-gradient(to bottom, #C8A2C8, purple);
+  min-height: 100vh;
+}
+
+.brand-slogan {
+  background-color: white;
+  color: purple;
+  font-weight: bold;
+  width: 300px;
+  margin-top: 200px;
+  position: flex;
+  align-content: center;
+  height: 150px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.task-button {
+  background-color: white;
+  color: purple;
+  border: none;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}

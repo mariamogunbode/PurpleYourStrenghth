@@ -4,10 +4,16 @@ import './page1.css'
 function LandingPage() {
   return(
     <>
-    <div>Welcome to PurpleYourStrength</div>
+    <div className="background-color">
+    <h1>Welcome to PurpleYourStrength</h1>
+    <div className="brand-slogan">
+      <p>Purple Your Strength</p>
+      <p>Execute Your Task</p>
+    </div>
     <Link to="/todo">
-      <button>Task Myself</button>
+      <button className="task-button">Task Myself</button>
     </Link>
+    </div>
     </>
   );
 }

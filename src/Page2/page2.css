@@ -1,0 +1,12 @@
+.background {
+  background-color: rgb(223, 137, 223);
+  min-height: 100vh;
+}
+
+.myTask {
+  text-align: start;
+}
+
+.task-div {
+  display: flex;
+}
