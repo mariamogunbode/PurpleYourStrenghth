@@ -1,6 +1,23 @@
 .background-color {
-  background:linear-gradient(to bottom, #C8A2C8, purple);
+background:linear-gradient(to bottom, white, purple);
   min-height: 100vh;
+}
+
+.welcome-message {
+  color: purple;
+}
+
+.welcome-message2 {
+  color: purple;
+  font-weight: bold;
+}
+
+.empty-div {
+  height: 100px;
+  background-color: white;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  align-content: center;
 }
 
 .brand-slogan {
@@ -8,7 +25,9 @@
   color: purple;
   font-weight: bold;
   width: 300px;
-  margin-top: 200px;
+  margin-top: 100px;
+  margin-left: 400px;
+  margin-bottom: 20px;
   position: flex;
   align-content: center;
   height: 150px;

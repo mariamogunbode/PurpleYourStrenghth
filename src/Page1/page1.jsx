@@ -5,7 +5,9 @@ function LandingPage() {
   return(
     <>
     <div className="background-color">
-    <h1>Welcome to PurpleYourStrength</h1>
+    <h1 className="welcome-message">Welcome to PurpleYourStrength</h1>
+    <div className="empty-div">
+      <h2 className="welcome-message2">Where Every Milestone Matters</h2></div>
     <div className="brand-slogan">
       <p>Purple Your Strength</p>
       <p>Execute Your Task</p>

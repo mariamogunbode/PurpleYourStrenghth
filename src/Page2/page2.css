@@ -1,5 +1,6 @@
 .background {
-  background-color: rgb(223, 137, 223);
+  background:linear-gradient(to bottom, white, purple);
+  
   min-height: 100vh;
 }
 
@@ -7,6 +8,77 @@
   text-align: start;
 }
 
+.achievement-div {
+  text-align: start;
+  background-color: white;
+}
+
 .task-div {
+  text-align: start;
+  background:linear-gradient(to bottom, rgb(212, 148, 212), rgb(170, 8, 170));
+  border: 1px solid white;
+  border-radius: 10px;
+  
+}
+
+.enter-task {
+  height: 30px;
+  width: 70%;
+  border: none;
+  border-radius: 5px;
+}
+
+.add-task {
+  height: 32px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(170, 40, 170);
+  color: white;
+  font-weight: 700;
+}
+
+.buttons-div {
+  
+}
+
+.filter-buttons {
   display: flex;
+  flex-direction: column;
+}
+
+.filter-button1,
+.filter-button2,
+.filter-button3 {
+  margin-top: 10px;
+  height: 40px;
+  width: 60%;
+  margin-left: 20%;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  font-weight: 700;
+}
+
+.filter-button1 {
+  background-color: rgb(216, 77, 216);
+}
+
+.filter-button2 {
+  background-color: rgb(167, 66, 167);
+}
+
+.filter-button3 {
+  background-color: purple;
+}
+
+.progress-container {
+  background-color: grey;
+  height: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.progress-fill {
+  height: 17px;
+  background-color: purple;
 }
