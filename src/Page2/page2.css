@@ -1,7 +1,9 @@
 .background {
   background:linear-gradient(to bottom, white, purple);
-  
   min-height: 100vh;
+  width: 1120px;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 .myTask {
@@ -17,8 +19,10 @@
   text-align: start;
   background:linear-gradient(to bottom, rgb(212, 148, 212), rgb(170, 8, 170));
   border: 1px solid white;
-  border-radius: 10px;
-  
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1px 20px;
 }
 
 .enter-task {
@@ -38,7 +42,37 @@
 }
 
 .buttons-div {
-  
+  display: flex;
+  gap: 10px;
+}
+
+.button-div1,
+.button-div2,
+.button-div3 {
+  width: 80px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.button-div1 {
+  background-color: green;
+  color: white;
+}
+
+.button-div2 {
+  background-color: purple;
+  color: white;
+}
+
+.button-div3 {
+  background-color: red;
+  color: white;
+}
+
+.tasks-div {
+  color: white;
+  font-weight: bold;
 }
 
 .filter-buttons {
@@ -48,7 +82,8 @@
 
 .filter-button1,
 .filter-button2,
-.filter-button3 {
+.filter-button3,
+.search-bar {
   margin-top: 10px;
   height: 40px;
   width: 60%;
@@ -57,6 +92,20 @@
   border-radius: 20px;
   border: none;
   font-weight: 700;
+  cursor: pointer;
+}
+
+.active-filter {
+   background-color: white;
+   margin-top: 10px;
+  height: 40px;
+  width: 60%;
+  margin-left: 20%;
+  color: purple;
+  border-radius: 20px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .filter-button1 {
@@ -71,6 +120,14 @@
   background-color: purple;
 }
 
+.search-bar {
+ padding-left: 40px; 
+ margin-left: -5px;
+ width: 55%;
+ margin-bottom: 20px;
+ border: 2px solid purple;
+}
+
 .progress-container {
   background-color: grey;
   height: 12px;
@@ -82,3 +139,46 @@
   height: 17px;
   background-color: purple;
 }
+
+.progress-para {
+  color: rgb(75, 8, 75);
+  font-weight: 500;  
+}
+.achievement-para {
+  color: rgb(75, 8, 75);
+  font-weight: 500;  
+  padding-top: 20px;
+}
+
+.your-achievements {
+  color: rgb(75, 8, 75);
+}
+
+.achievement-icon {
+  margin: 0 10px 5px 10px;
+  color: green;
+  font-size: larger;
+}
+
+.icon-achievement {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.icon-progress {
+  display: flex;
+  align-items: center;
+  padding: 20px 0 10px 0;
+}
+
+.progress-icon {
+  color: rgb(75, 6, 75);
+   margin: 0 10px 0 10px;
+}
+
+
+
+
+

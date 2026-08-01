@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react';
+import { Icon } from "@iconify/react"
 import './page2.css'
 
 function TodoPage({tasks, setTasks}) {
@@ -133,35 +134,48 @@ function TodoPage({tasks, setTasks}) {
     <div>
       <div className="filter-buttons">
       <button 
-      className="filter-button1"
+      className ={filter === "all"
+        ? "active-filter"
+        :"filter-button1"
+      }
       onClick={() => setFilter("all")}>All Tasks{totalTask}</button>
         <button 
-        className="filter-button2"
+        className={filter === "active"
+        ? "active-filter"
+        :"filter-button2"
+      }
         onClick={() => setFilter("active")}>Active Tasks{activeTask}</button>
         <button 
-        className="filter-button3"
+        className ={filter === "completed"
+        ? "active-filter"
+        :"filter-button3"
+      }
         onClick={() => setFilter("completed")}>Completed Tasks{completeTask}</button>
         </div>
-        <div>
+        <div className="search-div">
           <input
+          className="search-bar"
           type="text" 
           value={search}
           placeholder={"Search tasks..."}
           onChange={(e) => setSearch(e.target.value)}/>
         </div>
-        <div className="task-buttons">
+        <div>
           {filteredTasks.map((task) => (
             <div key={task.id}
              className="task-div">
               <div>
-            <p>{task.task}</p>
+            <p className="tasks-div">{task.task}</p>
             </div>
             <div className="buttons-div">
           <button 
+          className="button-div1"
           onClick={() => handleCompletedTask(task.id)}>{task.completed ? "Undo" : "Complete"}</button>
           <button
+          className="button-div2"
           onClick={() => handleEditTask(task.id)}>Edit</button>
-          <button 
+          <button
+          className="button-div3" 
           onClick={() => handleDeleteTask(task.id)}>Delete</button>
           </div>
             </div>
@@ -170,14 +184,23 @@ function TodoPage({tasks, setTasks}) {
 </div>
 
     <div className="achievement-div"> 
-      <h2>PurpleFul Achievements</h2>
-      <p>Progress: {progress}%</p>
+      <div className="icon-achievement">
+      <Icon 
+      className="achievement-icon"
+      icon="mdi:trophy" />
+      <h2 className="your-achievements">Your Achievements</h2>
+      </div>
+      <div className="icon-progress">
+        <Icon 
+        className="progress-icon" icon="mdi:rocket-launch" />
+      <p className="progress-para">Progress: {progress}%</p>
+      </div>
       <div className="progress-container">
         <div className="progress-fill"
         style={{width: `${progress}%`}}
         ></div>
       </div>
-      <p>{achievement}</p>
+      <p className="achievement-para">{achievement}</p>
     </div>
       
       </div>
