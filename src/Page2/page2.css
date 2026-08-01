@@ -182,3 +182,25 @@
 
 
 
+@media (max-width: 768px) {
+ .task-div {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  padding: 10px 30px;
+ }
+
+ .button-div1,
+.button-div2,
+.button-div3 {
+  width: 100px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  height: 30px;
+}
+
+.tasks-div {
+  word-break: break-word;
+}
+}

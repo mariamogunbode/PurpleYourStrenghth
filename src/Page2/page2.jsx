@@ -171,12 +171,16 @@ function TodoPage({tasks, setTasks}) {
           <button 
           className="button-div1"
           onClick={() => handleCompletedTask(task.id)}>{task.completed ? "Undo" : "Complete"}</button>
+          {!task.completed && (
+            <>
           <button
           className="button-div2"
           onClick={() => handleEditTask(task.id)}>Edit</button>
           <button
           className="button-div3" 
           onClick={() => handleDeleteTask(task.id)}>Delete</button>
+          </>
+          )}
           </div>
             </div>
           ))}
