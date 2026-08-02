@@ -20,17 +20,16 @@ function TodoPage({tasks, setTasks, getTasks}) {
       return;
      }
      if(editTaskId !== null) {
-      setTasks(
-        tasks.map((task) => {
-          if(task.id === editTaskId) {
-            return {
-              ...task,
-              task: addTask
-            }
-          }
-          return task;
-        })
-      );
+      await
+      fetch(`http://localhost:3000/tasks/${editTaskId}`, {
+        method: "PATCH",
+        headers: {
+           "content-Type": "application/json",
+         },
+         body: JSON.stringify({task: addTask}),
+      })
+
+      await getTasks();
       setAddTask("");
       setEditTaskId(null);
       return;
@@ -75,12 +74,12 @@ function TodoPage({tasks, setTasks, getTasks}) {
     setEditTaskId(id);
   }
 
-  function handleDeleteTask(id) {
-    setTasks(
-      tasks.filter((task) => {
-        return task.id !==id
-      })
-    )
+  async function handleDeleteTask(id) {
+    await
+    fetch(`http://localhost:3000/tasks/${id}`, {
+      method: "DELETE",
+    })
+    await getTasks();
   }
 
  let filteredTasks;
@@ -118,6 +117,12 @@ function TodoPage({tasks, setTasks, getTasks}) {
   filteredTasks = filteredTasks.filter(task => task.task.toLowerCase().includes(search.toLowerCase()))
 
 
+  function handleKeyDown(e) {
+    if(e.key === "Enter") {
+      handleAddTask();
+    }
+  }
+
   return(
     <>
     <div className="background">
@@ -132,7 +137,8 @@ function TodoPage({tasks, setTasks, getTasks}) {
       placeholder="Enter Task" 
       value={addTask}
       onChange={(e) => setAddTask(e.target.value)}
-      ref={inputRef}/>
+      ref={inputRef}
+      onKeyDown={handleKeyDown}/>
       <button 
       className="add-task"
       onClick={handleAddTask}>Add Task</button>
@@ -172,8 +178,8 @@ function TodoPage({tasks, setTasks, getTasks}) {
           {filteredTasks.map((task) => (
             <div key={task.id}
              className="task-div">
-              <div>
-            <p className="tasks-div">{task.task}</p>
+              <div  className="para-div">
+            <p  className="tasks-div">{task.task}</p>
             </div>
             <div className="buttons-div">
           <button 

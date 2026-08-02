@@ -22,7 +22,9 @@
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1px 20px;
+  flex-wrap: wrap;
 }
 
 .enter-task {
@@ -44,6 +46,7 @@
 .buttons-div {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .button-div1,
@@ -53,6 +56,8 @@
   border: none;
   border-radius: 5px;
   font-weight: 700;
+  cursor: pointer;
+   
 }
 
 .button-div1 {
@@ -73,6 +78,9 @@
 .tasks-div {
   color: white;
   font-weight: bold;
+  flex: 1;
+  word-break: break-word;
+  margin: 0;
 }
 
 .filter-buttons {
@@ -126,6 +134,7 @@
  width: 55%;
  margin-bottom: 20px;
  border: 2px solid purple;
+ color: black;
 }
 
 .progress-container {
@@ -186,7 +195,8 @@
  .task-div {
   display: flex;
   flex-direction: column;
-  height: 60px;
+  align-items: center;
+
   padding: 10px 30px;
  }
 
@@ -198,10 +208,32 @@
   border-radius: 10px;
   font-weight: bold;
   height: 30px;
+  margin-top: 10px;
+ 
 }
 
 .tasks-div {
   word-break: break-word;
+  overflow-wrap: anywhere;
+  min-width: 0;
+  flex: 1;
+}
+
+.task-div {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.buttons-div {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+ 
+}
+
+.para-div {
+  width:
 }
 
 }
