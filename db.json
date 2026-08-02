@@ -1,0 +1,30 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "task": "Study React",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "task": "Study React",
+      "completed": true
+    },
+    {
+      "task": "ff",
+      "completed": false,
+      "id": "GGSRKmuwjoc"
+    },
+    {
+      "task": "dfghn",
+      "completed": false,
+      "id": "-q777SWXYaU"
+    },
+    {
+      "task": "schooling",
+      "completed": false,
+      "id": "5e2AwTTblLI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

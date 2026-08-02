@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Icon } from "@iconify/react"
 import './page2.css'
 
-function TodoPage({tasks, setTasks}) {
+function TodoPage({tasks, setTasks, getTasks}) {
 
   const inputRef = useRef(null);
   const [addTask, setAddTask] = useState("");
@@ -15,7 +15,7 @@ function TodoPage({tasks, setTasks}) {
     inputRef.current.focus();
   }, [])
 
-  function handleAddTask() {
+  async function handleAddTask() {
      if(addTask.trim() === "") {
       return;
      }
@@ -35,14 +35,22 @@ function TodoPage({tasks, setTasks}) {
       setEditTaskId(null);
       return;
      }
-     setTasks([
-      ...tasks,
-      {id: Date.now(),
-        task: addTask,
-        completed: false,
-      }
-     ])
 
+     const newTask = {
+         task: addTask,
+         completed: false,
+       };
+       await
+       fetch("http://localhost:3000/tasks", {
+         method: "POST",
+         headers: {
+           "content-Type": "application/json",
+         },
+         body: JSON.stringify(newTask),
+       });
+     
+       await getTasks()
+;
      setAddTask("");
     inputRef.current.focus();
   }
