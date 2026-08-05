@@ -1,16 +1,140 @@
-# React + Vite
+# 💜 PurpleYourStrength – Task Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Power Your Strength, Execute Your To-Do List.**
 
-Currently, two official plugins are available:
+PurpleYourStrength is a modern task management application built with **React** and **Vite**. It helps users organize daily tasks while tracking their progress and achievements. The application implements full CRUD functionality using a REST API powered by JSON Server.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📸 Project Preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🏠 Landing Page
 
-## Expanding the ESLint configuration
+![Landing Page](./screenshots/home-page.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ✅ Task Management Page
+
+![Task Management Page](./screenshots/tasks-page.png)
+
+---
+
+## 🌐 Live Demo
+
+🔗 **Live Application:** https://your-live-demo-link
+
+> **Note:** The live demo link will be updated after deployment.
+
+---
+
+## ✨ Features
+
+- ✅ Add new tasks
+- ✅ Edit existing tasks
+- ✅ Delete tasks
+- ✅ Mark tasks as Complete or Undo
+- ✅ Search tasks
+- ✅ Filter tasks (All, Active, Completed)
+- ✅ Progress bar showing completion percentage
+- ✅ Achievement messages based on progress
+- ✅ Responsive user interface
+- ✅ REST API integration with JSON Server
+
+---
+
+## 🛠️ Technologies Used
+
+- React
+- Vite
+- JavaScript (ES6+)
+- CSS3
+- REST API
+- JSON Server
+- Git
+- GitHub
+
+---
+
+## 📚 What I Learned
+
+Building PurpleYourStrength helped me strengthen my understanding of:
+
+- React Hooks (`useState` and `useEffect`)
+- REST API integration using the Fetch API
+- Asynchronous JavaScript (`async` / `await`)
+- CRUD Operations (GET, POST, PATCH and DELETE)
+- Component communication using Props
+- State management in React
+- Responsive UI design
+- Debugging React applications
+
+---
+
+## 🚧 Challenges Faced
+
+During development, I encountered several challenges that helped improve my problem-solving skills.
+
+Some of them include:
+
+- Connecting React with JSON Server
+- Understanding the difference between updating React state and updating backend data
+- Learning how to use `async` and `await`
+- Implementing full CRUD operations
+- Fixing UI layout issues when displaying long task names
+- Debugging React state updates after editing and deleting tasks
+
+Each challenge helped deepen my understanding of frontend development and REST APIs.
+
+---
+
+## 🚀 Installation
+
+### Clone the repository
+
+```bash
+git clone YOUR_REPOSITORY_LINK
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the React application
+
+```bash
+npm run dev
+```
+
+### Run JSON Server
+
+```bash
+npx json-server db.json
+```
+
+---
+
+## 🔮 Future Improvements
+
+- Deploy backend to Render
+- Deploy frontend
+- Dark Mode
+- Due Dates
+
+---
+
+## 👩🏽‍💻 Author
+
+**Mariam Ogunbode**
+
+**GitHub:**  
+https://github.com/mariamogunbode
+
+**LinkedIn:**  
+https://www.linkedin.com/in/mariam-ogunbode-917759246
+
+---
+
+## ⭐ Acknowledgements
+
+This project was built as part of my frontend development learning journey to strengthen my understanding of React, REST APIs, asynchronous JavaScript, and CRUD applications.
