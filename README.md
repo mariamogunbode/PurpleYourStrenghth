@@ -91,7 +91,7 @@ Each challenge helped deepen my understanding of frontend development and REST A
 ### Clone the repository
 
 ```bash
-git clone YOUR_REPOSITORY_LINK
+git clone https://github.com/mariamogunbode/PurpleYourStrenghth.git
 ```
 
 ### Install dependencies
